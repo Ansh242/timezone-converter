@@ -63,16 +63,16 @@ function convertTime() {
 }
 
 fetch('https://worldtimeapi.org/api/ip')
-    .then(res => res.json())
-    .then(data => {
-      const DateTime = luxon.DateTime;
-      const time = DateTime.fromISO(data.datetime).toFormat('HH:mm:ss');
-      document.getElementById('time').textContent = time;
-    })
-    .catch(err => {
-      document.getElementById('time').textContent = "Error fetching time.";
-      console.error(err);
-    });
+  .then(res => res.json())
+  .then(data => {
+    const DateTime = luxon.DateTime;
+    const time = DateTime.fromISO(data.datetime).toFormat('HH:mm:ss');
+    document.getElementById('time').textContent = time;
+  })
+  .catch(err => {
+    document.getElementById('time').textContent = "Error fetching time.";
+    console.error(err);
+  });
 
 
 alert("If you face 'Error fetching time' refresh the page")
