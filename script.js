@@ -1,7 +1,7 @@
 const timezones = [
-  'UTC', 'Asia/Kolkata', 'America/New_York', 'Europe/London',
+  'UTC', 'Asia/Kolkata', 'America/New York', 'Europe/London',
   'Asia/Tokyo', 'Australia/Sydney', 'Africa/Cairo', 'Europe/Berlin',
-  'America/Los_Angeles'
+  'America/Los Angeles'
 ];
 
 const timeSlots_main = [
