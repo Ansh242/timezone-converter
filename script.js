@@ -61,3 +61,15 @@ function convertTime() {
   localTime.textContent = `Time in ${fromZone}: ${fullTime.toFormat("dd/MM/yyyy, hh:mm:ss a")}`;
   convertedTime.textContent = `Time in ${toZone}: ${converted.toFormat("dd/MM/yyyy, hh:mm:ss a")}`;
 }
+
+fetch('https://worldtimeapi.org/api/ip')
+    .then(res => res.json())
+    .then(data => {
+      const DateTime = luxon.DateTime;
+      const time = DateTime.fromISO(data.datetime).toFormat('HH:mm:ss');
+      document.getElementById('time').textContent = time;
+    })
+    .catch(err => {
+      document.getElementById('time').textContent = "Error fetching time.";
+      console.error(err);
+    });
