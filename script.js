@@ -73,3 +73,6 @@ fetch('https://worldtimeapi.org/api/ip')
       document.getElementById('time').textContent = "Error fetching time.";
       console.error(err);
     });
+
+
+alert("If you face 'Error fetching time' refresh the page")
