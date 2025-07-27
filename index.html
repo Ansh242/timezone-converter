@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Converter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+</head>
+
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-6">
+
+  <div class="max-w-md w-full bg-gray-800 rounded-2xl shadow-xl p-6">
+    <h1 class="text-3xl font-bold text-center mb-6">Time Zone Converter</h1>
+
+    <label for="timezone1Select" class="block text-sm font-semibold mb-1">From Time Zone:</label>
+    <select id="timezone1Select" class="w-full p-2 mb-4 rounded bg-gray-700 text-white border border-gray-600"></select>
+
+    <label for="timeSlots" class="block text-sm font-semibold mb-1">Select Time:</label>
+    <select id="timeSlots" class="w-full p-2 mb-4 rounded bg-gray-700 text-white border border-gray-600"></select>
+
+    <label for="timezone2Select" class="block text-sm font-semibold mb-1">To Time Zone:</label>
+    <select id="timezone2Select" class="w-full p-2 mb-4 rounded bg-gray-700 text-white border border-gray-600"></select>
+
+    <button onclick="convertTime()"
+      class="w-full bg-blue-600 hover:bg-blue-700 transition text-white p-2 rounded-lg font-medium">Convert</button>
+
+    <div class="mt-6 space-y-2">
+      <p class="text-lg"><strong>Time in From Zone:</strong> <span id="localTime"></span></p>
+      <p class="text-lg"><strong>Time in To Zone:</strong> <span id="convertedTime"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
